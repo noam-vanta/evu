@@ -86,6 +86,9 @@ if uploaded_file:
     test_histogram = new_df["testGroup"].value_counts()
     st.write(test_histogram)
 
+    st.slider("how many tests to show?", min_value=1, max_value=100, value=10)
+    
+
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
