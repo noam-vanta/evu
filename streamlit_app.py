@@ -83,6 +83,9 @@ if uploaded_file:
     new_df = pd.DataFrame([test for test in all_tests if test.testGroup is None])
     st.write(new_df.head(10))
 
+    test_histogram = new_df["testGroup"].value_counts()
+    st.write(test_histogram)
+
 # Ask user for their OpenAI API key via `st.text_input`.
 # Alternatively, you can store the API key in `./.streamlit/secrets.toml` and access it
 # via `st.secrets`, see https://docs.streamlit.io/develop/concepts/connections/secrets-management
